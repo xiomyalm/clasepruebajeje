@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+	  .activo{
+	  	font-weight: bold;
+	  }
+		
+	</style>
+</head>
+<body>
+<h1 id="holi">Hello World</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<li>
+	<a href="#" class="enlace">ja</a>
+</li>
+<li>
+	<a href="#" class="enlace">je</a>
+</li>
+<li>
+	<a href="#" class="enlace">ji</a>
+</li>
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  	
+  </script>
+
+  <script>
+  	$(document).ready(function(){
+  		$("#holi").click(function(){
+  			console.log($(this));
+  		});
+
+  		var parrafos= $("p");
+        
+  		console.log(parrafos.length);
+
+  		/*el (". ") captura las clases , el each hace a los elementos un callback */
+
+  		$(".enlace").each(function(indice){
+  			$(this).click(function(evento){
+                    evento.preventDefault;
+                   /* console.log(indice); */
+                   $(".activo").removeClass("activo");
+                   $(this).addClass("activo");
+
+  			});
+
+  		});  
+
+  		console.log(parrafos.hasClass("parrafo"));
+
+ 
+  	});
+
+
+  </script>
+
+</body>
+</html>

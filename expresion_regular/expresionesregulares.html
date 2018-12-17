@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		window.onload=function(){
+
+	/*		 var reg = /^(T|t)(a|[aeiou])?m$/; el: /^[----]--$/ condiciona a que solo esa palabra sea true asi este junta las 3 primeras letras y despues 2 , daria falso porque tiene esas expresiones // el: /^[---]+-$ los caracteres que estan dentro de los corchetes pueden aparecer una o mas veces ,// el : /^[---]*m$ permite solo que lo que esta dentro de los corchetes se repetia individualmente 1 o mas veces o solo la t y m // el : /^[---]?m$ esto solo permite que lo que esta dentro de los corchetes esté o no este , pero no se repite // el : /^(T|t)[---]?m$ es un condicional de mayuscula , bien es T o t no puede ser tt o TT o tT. // el | or es una condicional simple 
+
+			console.log(reg.test("taeiiiiim")); */
+
+			var reg= /^[a-z0-9_%\+\-\.]+@[a-z0-9]+\.?[a-z]{2,3}\.[a-z]{2,3}$/ ;
+
+			/* /^\d{5,8}$/ : singnifica minimo 5 caracteresy maximo 8 caracteres,
+			   /^\d{5,}$/ : minimo 5 caracteres , maximo infinito.
+			   /^([a-z-A-Z]|\d){5,}$/ : ejm : aZ99999999999 
+			   \/ este simbolo permite escapra los caracteres pero asi mismo no rompe la cadena de carateres 
+			   /^[0123][0-9]\/[01][0-9]\/(19|20)[0-9][0-8]$/ ejem : 09/04/2018 
+			   /^[a-z0-9_%\+\-\.]+@[a-z0-9]+\.?[a-z]{2,3}\.[a-z]{2,3}$/  ejm : xiomy_948@hotmail.com */
+
+			console.log(reg.test(""));
+
+
+
+		}
+	</script>
+
+</body>
+</html>

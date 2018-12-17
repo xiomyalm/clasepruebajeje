@@ -1,0 +1,291 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background-color: #000;
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*font-family: 'Orbitron', sans-serif;*/
+nav{
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 80%;
+  max-width: 250px;
+  height: 100%;
+  padding-top: 60px;
+  padding-left: 20px;
+}
+nav ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul.rrss{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+ul.menu a{
+  color: #A6A6A6;
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: none;
+  padding: 10px 10px;
+  display: inline-block;
+  transition: all 0.2s linear;
+  line-height: 19px;
+  font-size: 15px;
+  font-weight: 400;
+}
+ul.menu a:hover{
+  color: #fff;
+}
+ul.menu>li:nth-child(9)>a{
+  color: #EBA43D; 
+}
+#cierra{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.raya_izquierda{
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  background-color:  #A6A6A6;
+  transform: translateY(15px) rotate(135deg); 
+}
+.raya_derecha{
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: rotate(-135deg);
+  background-color:  #A6A6A6;
+  transform: translateY(15px) rotate(-135deg);
+}
+#cierra:hover{
+  cursor: pointer;
+}
+#cierra:hover .raya_derecha, 
+#cierra:hover .raya_izquierda{
+  background-color: #fff;
+}
+.tapa{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.container{
+  width: 100%;
+  transition: all 0.2s linear;
+}
+header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background-image: url(img/universe-slider-bg.jpg);
+  background-position: center top;
+  background-size: cover;
+}
+.logo{
+  width: 30%;
+  max-width: 300px;
+}
+#abre{
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.raya{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;   
+}
+.raya:after, .raya:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  left: 0;
+}
+.raya:after{
+  bottom: 10px;
+}
+.raya:before{
+  top: 10px;
+}
+h1{
+  border: 1px solid red;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: Orbitron;
+  padding: 40px 10px;
+}
+.cohete{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.cohete>img{
+  width: 60%;
+}
+.texto_header{
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: -100px;
+}
+.dere{
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.dere img{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.dere p{
+ font-size: 14px;
+ line-height: 22px;
+ font-weight: 400;
+ color: rgb(65, 75, 89);
+ font-family: Orbitron;
+ }
+.izq{
+  width: 50%;
+  padding-left: 60px;
+}
+.izq h4{
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-family: Orbitron;
+  }
+  .izq p{
+    min-width: 330px;
+    max-width: 330px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: rgb(133, 146, 158);
+    font-family: Orbitron;
+    min-height: 177px;
+    max-height: 177px;
+   }
+   .tierra{
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     flex-wrap: wrap;
+     padding-top: 40px;
+   }
+   .mitad{
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    width: 50%;
+    padding: 70px 10% 50px;
+   }
+   h3{
+      font-size: 25px;
+      line-height: 29px;
+      font-weight: 400;
+      font-family: "Orbitron", Arial, Tahoma, sans-serif;
+      color: #d1dadf;
+   }
+   .mitad p{
+    color: #989fa3;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+   }
+   .boton{
+    color: #d1dadf;
+    display: inline-block;
+    border: 2px solid #d1dadf;
+    border-radius: 3px;
+    padding: 10px 30px;
+   }
+   .borde{
+    background-image: url(img/universe-box-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:100px;
+    background-size: contain;
+   }
+   h2{
+      font-size: 30px;
+      line-height: 34px;
+      font-weight: 300;
+      letter-spacing: 0px;
+      font-family: "Orbitron", Arial, Tahoma, sans-serif;
+      color: #d1dadf;
+   }
+   .mapa_terrestre{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content:flex-start;
+     flex-wrap: wrap; 
+     margin-top: -150px;
+   }
+   .kilometros{
+     width: 33.33333%;
+   }
+   .mapa_tierra{
+     width: 66.6666%;
+   }
+   .mapa_tierra>img{
+     width: 75%;
+     margin-left: 20px;
+   }
+   .parallax-window {
+    background: transparent;
+    text-align: center;
+    color: #fff;
+    padding: 300px 20px;
+    min-height: 800px;
+    position: relative;
+}
+.mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.7);
+}
+h2{
+  position: relative;
+}

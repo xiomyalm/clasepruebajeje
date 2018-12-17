@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+	window.onload= function (){
+		var fibonacci = [];
+		var cantidad = 20;
+		for( var i=0; i<cantidad; i++) {
+			if (i<2 ){
+				fibonacci.push(1);
+			}
+			else{
+				fibonacci.push(fibonacci[i-2]+fibonacci[i-1])
+			}
+		}
+		console.log(fibonacci);
+	}
+</script>
+</body>
+</html>

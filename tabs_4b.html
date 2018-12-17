@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title></title>
+  <style type="text/css">
+  	body{
+  		padding: 0;
+  		margin:0;
+  	}
+  	nav{
+  		padding: 10px;
+
+  	}
+  	nav ul{
+  		list-style-type: none;
+  		margin:0;
+  		padding: 0;
+  	}
+  	nav ul  li a {
+  		display: block;
+  		width: 200px;
+  		padding: 5px;
+  		text-decoration: none;
+  		color: #333;
+
+  	}
+  	nav ul li a.activo{
+  		border-left: 3px solid #999;
+  		
+  	}
+  	div{
+  		padding: 10px;
+  		display: none;
+  	}
+  	div.activa{
+  		display: block;
+
+  	}
+
+  </style>
+
+ </head>
+
+ <body>
+ 	<nav>
+ 		<ul>
+ 			<li><a class="activo" href="contenido1" data-indice="0">hola</a></li>
+ 			<li><a href="contenido2" data-indice="0">jeje</a></li>
+ 			<li><a href="contenido3" data-indice="0">ñee</a></li>
+ 		</ul>
+ 	</nav>
+ 	<div id="contenido1" class="activa">
+ 		<p>hi 0</p>
+ 		
+ 	</div>
+ 	<div id="contenido2" >
+ 		<p>hi 1</p>
+ 		
+ 	</div>
+ 	<div  id="contenido3"> 
+ 		<p>hi 2</p>
+ 		
+ 	</div>
+
+ <script type="text/javascript">
+	window.onload= function(){
+          var enlaces =document.getElementsByTagName("a");
+          var contenedores= document.getElementsByTagName("div");
+            for( var i =0 ; i<enlaces.length; i++){
+              enlaces[i].onclick=function(evento)
+              {
+                evento.preventDefault();
+                console.log( this.dataset);
+                for (var j=0 ; j<enlaces.length; j++){
+                  enlaces[j].className="";
+                  contenedores[j].className="";
+                }
+                this.className= "activo";
+                contenedores[this.dataset.indice].className= "activa";
+                
+                
+              }
+
+
+            }
+    
+
+	}
+		
+	
+</script>
+
+
+
+ </body>
+ </html>

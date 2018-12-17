@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.cuadro{
+			height: 50px;
+			width: 50px;
+			background-color: #300;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.contenedor{
+			width: 600px;
+			height: 600px;
+			border: 1px solid #000;
+			position: relative;
+			margin: 100px auto 0 ;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="contenedor">
+		<div class="cuadro">
+	
+        </div>
+	</div>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript">
+	
+$ (document).ready(function()
+{
+		var posicionX = 0;
+		var posicionY = 0;
+		window.onkeyup =function(evento){    /*onkeyup : captura el evento que el usuario teclea y luego se dispara */
+			if(evento.keyCode==39){
+			  if(posicionX < 550){
+				$(".cuadro").animate({left:"+=50"},300,function(){
+					console.log($(".cuadro").css("left"));
+					posicionX+=50;
+				});
+				}
+				
+			};
+			if(evento.keyCode==37){
+				if(posicionX > 0){
+					$(".cuadro").animate({left:"-=50"},300);
+					posicionX-=50;
+				}
+			};
+			if(evento.keyCode==38){
+				if(posicionY > 0){
+				    $(".cuadro").animate({top:"-=50"},300);
+				    posicionY-=50;
+				}
+
+				
+			};
+			if(evento.keyCode==40){
+			 	if(posicionY < 550){
+				$(".cuadro").animate({top:"+=50"},300);
+			
+			    posicionY+=50;
+				}
+			};
+
+			
+
+		} ;
+	
+
+			
+	
+});
+
+</script>
+
+
+</body>
+</html>

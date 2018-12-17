@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: tahoma;
+		}
+		form{
+			width: 400px;
+			padding: 20px;
+			margin: 100px auto 0;
+		}
+		.color{
+			height: 398px;
+			border: 1px solid #000;
+		}
+		.controles{
+			margin-top: 20px;
+
+		}
+		label{
+			font-size: 0.9em;
+			display: block;
+
+		}
+		.control{
+			display: block;
+			width: 100%;
+			margin: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div class="color"></div>
+			<div class="controles">
+			
+		</div>
+			
+				<label>rojo</label>
+				<input type="range" class="control" min="0" max="225" step="1" value="0">
+
+				<label>verde</label>
+				<input type="range" class="control" min="0" max="225" step="1" value="0">
+
+				<label>azul</label>
+				<input type="range" class="control" min="0" max="225" step="1" value="0">
+
+			
+		
+		
+	</form>
+
+<script>
+window.onload=function(){
+	var cuadro_color =document.getElementsByClassName("color")[0];
+	var controles=document.getElementsByClassName("control");
+	var colores =[0 ,0 ,0];
+	cuadro_color.style.backgroundColor="rgb("+colores[0]+","+colores[1]+","+colores[2]+")";
+
+	for(var i = 0; i < controles.length; i++){
+		(function(indice){
+			controles[indice].oninput = function(){
+				console.log(controles[indice].value);
+				colores[indice]=controles[indice].value;
+				cuadro_color.style.backgroundColor="rgb("+colores[0]+","+colores[1]+","+colores[2]+")";
+
+			}
+		})(i);
+	}
+
+}
+
+
+
+</script>
+</body>
+</html>

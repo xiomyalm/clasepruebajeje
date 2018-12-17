@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.cuadro{
+			height: 140px;
+			width: 150px;
+			background-color: #300;
+		}
+	</style>
+</head>
+<body>
+<a href="#" class="boton">stress</a>
+<div class="cuadro">
+	
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript">
+	
+$ (document).ready(function()
+{
+	$(".boton").click(function(evento){
+		evento.preventDefault();
+		$(".cuadro").slideToggle(300,function(){
+			console.log("hi");
+		}); 
+											/*toggle:crear variable interna que determina si esta visible o no , y con un click lo oculta y con otro click lo des oculta. si en caso ya se muestra oculto lo que hara sera des ocultarlo // faceOut: hace lo mismo lo oculta con una transcion lenta mas no lo vuelve a mostrar.//faceIn : hace lo mismo que el faceOut pero este muestra en vez de ocultar.//slideUp: ocultar con un movimiento hacia lado .*/
+
+
+
+	});	
+	
+});
+
+</script>
+
+
+</body>
+</html>
